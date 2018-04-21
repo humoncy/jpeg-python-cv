@@ -21,16 +21,18 @@ def load_quantization_table():
                    [99,99,99,99,99,99,99,99],
                    [99,99,99,99,99,99,99,99]])
 
-    QF = 99
-    if QF < 50 and QF >= 1:
-        scale = np.floor(5000/QF)
-    elif QF < 100:
-        scale = 200 - 2*QF
-    else:
-        print("Quality Factor must be in the range [1..99]")
+    # QF = 99
+    # if QF < 50 and QF >= 1:
+    #     scale = np.floor(5000/QF)
+    # elif QF < 100:
+    #     scale = 200 - 2*QF
+    # else:
+    #     print("Quality Factor must be in the range [1..99]")
 
-    scale = scale / 100.0
-    Q = [QY * scale, QC * scale, QC * scale]
+    # scale = scale / 100.0
+    # Q = [QY * scale, QC * scale, QC * scale]
+
+    Q = [QY, QC, QC]
 
     return Q
 

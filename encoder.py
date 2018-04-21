@@ -18,11 +18,11 @@ def main():
 
     input_file = args.input
 
-    with open(input_file, "rb") as binary_file:
-        data = binary_file.read()
-        print(len(data))
-        print(data[100])
-    exit()
+    # with open(input_file, "rb") as binary_file:
+    #     data = binary_file.read()
+    #     print(len(data))
+    #     print(data[:10])
+    # exit()
     
     img = cv2.imread(input_file, cv2.IMREAD_COLOR)
 
